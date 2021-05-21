@@ -1,0 +1,37 @@
+<div style="width: 50%; background-color: darkcyan;margin: 10% 0 0 20%;">
+  <form action="">
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 5%;
+      "
+    >
+      <div style="margin-top: 5%;">
+        <input type="text" name="phone1" [(ngModel)]="num" placeholder="enter phone" id="" style="margin: 2%;" />
+        <div>
+            <div
+            style="display: flex;margin: 2%;"
+            *ngFor="let i of input_array; let k = index"
+          >
+            <div >
+              <input
+                type="text"
+                [(ngModel)]="numbers[k]"
+                name="num{{k}}"
+                placeholder="Enter Number"
+              />
+            </div>
+          <button (click)="delete_div(numbers[k])">Delete</button>
+
+      </div>
+        </div>
+        
+      <button style="width: auto;margin: 2%;" (click)="new_div()">Add another number</button>
+    </div>
+    <button style="margin: 5%;" (click)="submit()">Submit</button>
+    </div>
+  </form>
+</div>

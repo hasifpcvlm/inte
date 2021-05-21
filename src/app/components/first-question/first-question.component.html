@@ -1,0 +1,5 @@
+<div style="width: 50%;margin: 10%;">
+    <input type="text" name="index" [(ngModel)]="index" placeholder="Enter the index" id="">
+    <button (click)="nthTerm()">Find</button>
+    <p *ngIf="nth>0">the number of {{index}} index is {{nth}}</p>
+</div>
